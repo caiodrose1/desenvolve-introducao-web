@@ -1,0 +1,29 @@
+/* Estilizar a seção "CSS Zen Garden" */
+#zen-intro {
+    background-color: rosybrown;
+    /* Substitua pela cor desejada */
+    padding: 20px;
+    /* Adicione espaçamento interno */
+    border-radius: 5px;
+    /* Opcional: bordas arredondadas */
+}
+
+body {
+    background-color: #f4f0ea;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+#css-zen-garden {
+    background-color: #f4f0ea;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources {
+    background-color: gray;
+    padding: 25px;
+    border-radius: 0;
+    margin: 0;
+}
