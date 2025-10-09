@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercícios - Estilização Textual</title>
+<style>
+  /* 1. Aspectos gerais */
+  body {
+    width: 900px;              /* tamanho fixo da página */
+    margin: 0 auto;
+    font-family: sans-serif;   /* fonte sans-serif */
+  }
+
+  p {
+    text-indent: 1em;          /* indentação de parágrafo */
+  }
+
+  /* 2. Títulos */
+  h1, h2, h3 {
+    text-align: center;        /* alinhamento centralizado */
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  /* 3. Seções */
+  .resumo {
+    text-align: right;         /* alinhamento à direita */
+  }
+
+  .principal p {
+    line-height: 1.5;          /* espaçamento entre linhas */
+  }
+
+  /* 4. Abreviaturas */
+  abbr {
+    font-variant: small-caps;  /* texto em small-caps */
+  }
+</style>
+</head>
+<body>
+
+  <h1>O Jardim da Estilização</h1>
+  <div class="resumo">
+    <h2>Resumo</h2>
+    <p>Este projeto demonstra a beleza da personalização com <abbr title="Folhas de Estilo em Cascata">CSS</abbr>.</p>
+  </div>
+
+  <div class="principal">
+    <h3>Seção Principal</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, justo nec ultrices
+    egestas, velit quam tempor lectus, in egestas justo lorem in purus.</p>
+    <p>Vivamus id magna ac lorem suscipit varius. Sed in <abbr title="HyperText Markup Language">HTML</abbr> e
+    <abbr title="Cascading Style Sheets">CSS</abbr> uma união poderosa entre estrutura e estilo.</p>
+  </div>
+
+</body>
+</html>
