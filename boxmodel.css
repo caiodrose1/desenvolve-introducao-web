@@ -1,0 +1,124 @@
+/* === Regras gerais de layout === */
+:root {
+	--page-width: 80%;
+	--page-max-width: 1280px;
+	--gutter: 1rem;
+	--header-bg: #111; /* fundo escuro do cabeçalho */
+	--header-fg: #f5f5f5; /* texto claro do cabeçalho */
+	--footer-bg: #111; /* fundo escuro do rodapé */
+	--footer-fg: #f5f5f5;
+}
+
+/* Container principal: 80% da viewport, limitado a 1280px, centralizado */
+.site-container {
+	width: var(--page-width);
+	max-width: var(--page-max-width);
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
+}
+
+/* Altura da seção de introdução */
+.intro, section.intro {
+	height: 550px;
+}
+
+/* Remover #design-archives da renderização */
+#design-archives {
+	display: none !important;
+}
+
+/* === Cabeçalho === */
+header.site-header, .site-header {
+	background: var(--header-bg);
+	color: var(--header-fg);
+	padding: 1rem 0;
+}
+
+/* Coloca título e subtítulo lado-a-lado
+	 - usa flexbox para manter alinhamento e espaçamento
+*/
+.site-header .brand {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem; /* espaçamento entre título e subtítulo */
+}
+
+.site-header .brand .title {
+	margin-left: 1em; /* espaçamento lateral de 1em para o título principal */
+}
+
+.site-header .brand .subtitle {
+	opacity: 0.9;
+	font-size: 0.95rem;
+}
+
+/* Garante que o texto dentro do header tenha cor clara */
+.site-header a, .site-header h1, .site-header h2 {
+	color: var(--header-fg);
+}
+
+/* Mantém espaçamento do header em relação ao restante da página */
+.site-header + * {
+	margin-top: 1.25rem;
+}
+
+/* === Menus (painel lateral) === */
+/* Supondo que menus sejam UL/OL dentro de um painel lateral com classe .sidebar ou .side-panel */
+.sidebar ul, .side-panel ul, .sidebar ol, .side-panel ol {
+	list-style: none; /* remove bullets */
+	padding-left: 0;
+	margin: 0;
+}
+
+/* Espaçamento entre itens do menu e centralização */
+.sidebar ul > li, .side-panel ul > li,
+.sidebar ol > li, .side-panel ol > li {
+	margin: 0.75rem 0; /* pelo menos 1em solicitado; usamos 0.75rem (~12px) para consistência */
+	display: flex;
+	justify-content: center; /* centraliza itens dentro do menu */
+}
+
+/* Forçar espaçamento maior em telas maiores */
+@media (min-width: 700px) {
+	.sidebar ul > li, .side-panel ul > li,
+	.sidebar ol > li, .side-panel ol > li {
+		margin: 1rem 0; /* 1rem ≈ 1em */
+	}
+}
+
+/* === Rodapé com inversão de cores === */
+footer.site-footer, .site-footer {
+	background: var(--footer-bg);
+	color: var(--footer-fg);
+	padding: 1.25rem 0;
+	margin: 4% 0; /* 4% de espaçamento externo no topo e rodapé */
+}
+
+/* Links do rodapé transformados em caixas */
+footer.site-footer a, .site-footer a {
+	display: inline-block;
+	border: 2px solid var(--footer-fg);
+	padding: 0.5em;
+	color: var(--footer-fg);
+	text-decoration: none;
+	margin: 0.25rem; /* pequeno espaçamento entre caixas */
+}
+
+/* Ajustes responsivos e utilitários */
+@media (max-width: 420px) {
+	.site-container {
+		width: 95%;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+
+	.site-header .brand {
+		flex-direction: column;
+		gap: 0.5rem;
+		align-items: flex-start;
+	}
+}
+
