@@ -1,0 +1,25 @@
+/* Posicionamento base */
+.page-wrapper {
+	/* define a referência para posicionamento absoluto de itens filhos */
+	position: relative;
+}
+
+/* Painel de explicação */
+.explanation {
+	width: 60%;           /* ocupa 60% da largura disponível */
+	margin-right: 35%;    /* cria 35% de espaço à direita */
+	border-right: 1px solid #1f295c; /* borda à direita */
+	padding-right: 2%;    /* espaçamento interno à direita */
+	box-sizing: border-box; /* inclui padding/borda no cálculo da largura */
+}
+
+/* Menu de designs — posicionado à direita, ocupando o espaço deixado pela .explanation */
+.design-selection {
+	position: absolute;   /* posicionado em relação a .page-wrapper */
+	top: 560px;           /* inicia após a parte de introdução (ajustável) */
+	left: 62%;            /* inicia à direita, logo após .explanation (aprox.) */
+	padding: 0 2%;        /* espaçamento horizontal de 2% para centralizar o conteúdo */
+	box-sizing: border-box;
+	width: 34%;           /* largura opcional para preencher a área à direita */
+}
+
