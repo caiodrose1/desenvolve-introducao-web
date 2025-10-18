@@ -1,0 +1,118 @@
+
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  justify-content: center; /* center links horizontally */
+  gap: 1rem; /* space between links */
+  padding: 1rem 0;
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem; /* fixed same size for all links (approx) */
+  height: 2rem;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  box-sizing: border-box;
+  white-space: nowrap; /* prevent internal wrap */
+  overflow: hidden;
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  footer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.2rem;
+    height: 2rem;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 420px) {
+    footer a {
+      width: auto;
+      flex: 1 1 30%;
+      min-width: 6rem;
+    }
+  }
+
+  .benefits {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid transparent;
+    padding: 1rem 0;
+  }
+
+  .benefits > p {
+    flex: 0 1 70%;
+    margin: 0;
+    padding-right: 1rem;
+  }
+
+  .benefits > h3 {
+    flex: 0 1 30%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+  }
+
+  @media (max-width: 720px) {
+    .benefits {
+      flex-direction: column;
+    }
+    .benefits > h3,
+    .benefits > p {
+      flex: 1 1 auto;
+      padding: 0.5rem 0;
+    }
+  }
+
+  .participation {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+  }
+
+  .participation > p {
+    flex: 0 1 50%;
+    margin: 0;
+    padding: 0 1rem 0 0;
+  }
+
+  .participation > h3 {
+    flex: 0 1 50%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    .participation > p,
+    .participation > h3 {
+      flex: 1 1 100%;
+      padding: 0.5rem 0;
+    }
+  }
+
+  .benefits h3, .participation h3 {
+    font-size: 1.1rem;
+  }
