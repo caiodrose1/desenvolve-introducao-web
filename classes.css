@@ -1,0 +1,41 @@
+/* Pseudo-classes and pseudo-elements exercises */
+
+/* 1) Link customization */
+/* Base links: highlight color and bold */
+a {
+  color: #c94f6d; /* destaque (ajuste conforme a paleta do site) */
+  font-weight: 700;
+}
+
+/* Hover/active: change to lighter/darker tone for contrast */
+a:hover,
+a:active {
+  color: #e07a93;
+}
+
+/* Visited links should not be bold */
+a:visited {
+  color: #9a2f48; /* cor para links visitados (opcional) */
+  font-weight: 400;
+}
+
+/* 2) First letter of first paragraph in main section */
+/* Assume the main section uses .main or #zen-supporting as in the HTML */
+/* Apply to the first paragraph inside the main supporting section */
+.main p:first-of-type::first-letter,
+#zen-supporting p:first-of-type::first-letter {
+  font-size: 3rem; /* 3x typical (adjust if base font-size differs) */
+  font-family: Georgia, 'Times New Roman', serif; /* different font family */
+  float: left; /* float to the left */
+  line-height: 1;
+  margin-right: 0.5rem;
+}
+
+/* 3) Menu design selection borders */
+.design-selection nav ul li {
+  border-top: 1px solid #ddd; /* separator on top of every item */
+}
+
+.design-selection nav ul li:last-child {
+  border-bottom: 1px solid #ddd; /* bottom border only on last item */
+}
