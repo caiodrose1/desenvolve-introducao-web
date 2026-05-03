@@ -1,0 +1,52 @@
+@media (max-width: 768px) {
+
+  /* Remove reposicionamento do menu */
+  .design-selection {
+    position: static;
+  }
+
+  /* Remove borda lateral */
+  .page-wrapper {
+    border: none;
+  }
+
+  /* Flexbox em coluna (empilhado) */
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Remove altura fixa do cabeçalho */
+  header {
+    height: auto;
+  }
+
+  /* Remove espaçamento inicial dos parágrafos */
+  p {
+    text-indent: 0;
+    margin-top: 0;
+  }
+
+}
+
+@media print {
+
+  /* Fonte serifada */
+  body {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  /* Fundo claro no banner */
+  header {
+    background: white;
+    color: black;
+  }
+
+  /* Garantir que tudo fique legível */
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+
+}
